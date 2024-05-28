@@ -52,3 +52,7 @@ The Smart BBQ Monitoring System is a software solution designed to monitor and m
 
 **Date:**
 [05/29/2024]
+
+**Acknowledgments:**
+- The project utilizes ChatGPT, an AI language model developed by OpenAI, for assistance in writing the README and providing guidance on software engineering practices.
+
