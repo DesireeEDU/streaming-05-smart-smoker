@@ -1,52 +1,10 @@
-2024-05-29 11:51:07,784.bbq_monitoring.INFO ==================================================
-2024-05-29 11:51:07,784.bbq_monitoring.INFO Today is 2024-05-29 at 11:51 AM
-2024-05-29 11:51:07,784.bbq_monitoring.INFO Running on: nt Windows 10
-2024-05-29 11:51:07,784.bbq_monitoring.INFO Python version:  3.11.9
-2024-05-29 11:51:07,785.bbq_monitoring.INFO Python path: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0
-2024-05-29 11:51:07,785.bbq_monitoring.INFO Working dir: D:\Master's Data Analytics\Courses\44671 Streaming Data\Module 5\streaming-05-smart-smoker
-2024-05-29 11:51:07,785.bbq_monitoring.INFO ==================================================
-2024-05-29 11:51:07,815.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:20, 84.2
-2024-05-29 11:51:07,841.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:20, 
-2024-05-29 11:51:07,857.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:20, 
-2024-05-29 11:51:37,901.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:20, 84.2
-2024-05-29 11:51:37,915.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:20, 
-2024-05-29 11:51:37,929.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:20, 
-2024-05-29 11:52:07,960.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:21, 87.6
-2024-05-29 11:52:07,977.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:21, 
-2024-05-29 11:52:07,993.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:21, 
-2024-05-29 11:52:38,034.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:21, 87.6
-2024-05-29 11:52:38,051.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:21, 
-2024-05-29 11:52:38,077.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:21, 
-2024-05-29 11:53:08,107.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:22, 86.3
-2024-05-29 11:53:08,136.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:22, 
-2024-05-29 11:53:08,186.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:22, 
-2024-05-29 11:53:38,228.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:22, 86.3
-2024-05-29 11:53:38,254.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:22, 
-2024-05-29 11:53:38,271.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:22, 
-2024-05-29 11:54:08,357.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:23, 92
-2024-05-29 11:54:08,449.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:23, 
-2024-05-29 11:54:08,543.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:23, 
-2024-05-29 11:54:38,593.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:23, 92
-2024-05-29 11:54:38,615.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:23, 
-2024-05-29 11:54:38,632.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:23, 
-2024-05-29 11:55:08,677.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:24, 96.8
-2024-05-29 11:55:08,709.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:24, 
-2024-05-29 11:55:08,740.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:24, 
-2024-05-29 11:55:38,779.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:24, 96.8
-2024-05-29 11:55:38,790.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:24, 
-2024-05-29 11:55:38,810.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:24, 
-2024-05-29 11:56:08,853.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:25, 100.6
-2024-05-29 11:56:08,998.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:25, 
-2024-05-29 11:56:09,212.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:25, 
-2024-05-29 11:56:39,255.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:25, 100.9
-2024-05-29 11:56:39,278.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:25, 
-2024-05-29 11:56:39,303.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:25, 
-2024-05-29 11:57:09,364.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:25, 100.9
-2024-05-29 11:57:09,403.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:25, 
-2024-05-29 11:57:09,422.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:25, 
-2024-05-29 11:57:39,454.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:26, 104.8
-2024-05-29 11:57:39,472.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:26, 
-2024-05-29 11:57:39,487.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:26, 
-2024-05-29 11:58:09,506.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:26, 104.8
-2024-05-29 11:58:09,526.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:26, 
-2024-05-29 11:58:09,540.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:26, 
+2024-05-29 12:14:06,040.bbq_monitoring.INFO ==================================================
+2024-05-29 12:14:06,040.bbq_monitoring.INFO Today is 2024-05-29 at 12:14 PM
+2024-05-29 12:14:06,040.bbq_monitoring.INFO Running on: nt Windows 10
+2024-05-29 12:14:06,040.bbq_monitoring.INFO Python version:  3.11.9
+2024-05-29 12:14:06,041.bbq_monitoring.INFO Python path: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0
+2024-05-29 12:14:06,041.bbq_monitoring.INFO Working dir: D:\Master's Data Analytics\Courses\44671 Streaming Data\Module 5\streaming-05-smart-smoker
+2024-05-29 12:14:06,041.bbq_monitoring.INFO ==================================================
+2024-05-29 12:14:06,069.bbq_monitoring.INFO [X] Sent to queue01-smoker: 5/22/2021 12:20, 84.2
+2024-05-29 12:14:06,110.bbq_monitoring.INFO [X] Sent to queue02_food_A: 5/22/2021 12:20, 
+2024-05-29 12:14:06,128.bbq_monitoring.INFO [X] Sent to queue03_food_B: 5/22/2021 12:20, 
