@@ -62,7 +62,7 @@ def send_message(timestamp: str, temperature: float, queue_name: str):
     
         # publish the message to the queue
         ch.basic_publish(exchange="", routing_key=queue_name, body=message)
-        logger.info(f"[X] Sent to queue{queue_name}: {message}")
+        logger.info(f"[X] Sent message to queue {queue_name}: {message}")
     except pika.exceptions.AMQPConnectionError as e:
         logger.error(f"Error: Connection to RabbitMQ server failed: {e}")
     finally: 
@@ -76,12 +76,15 @@ def read_tasks(file_path: str):
         next(reader) #Skip header row
         for row in reader:
             timestamp = row[0]
-            smoker_temp = row[1]         
+            smoker_temp = row[1]       
             food_a_temp = row[2]
             food_b_temp = row[3]
-            send_message(timestamp, smoker_temp, "01-smoker")
-            send_message(timestamp, food_a_temp, "02_food_A")
-            send_message(timestamp, food_b_temp, "03_food_B")
+            if smoker_temp != '':
+                send_message(timestamp, smoker_temp, "01-smoker")
+            if food_a_temp != '':
+                send_message(timestamp, food_a_temp, "02_food_A")
+            if food_b_temp != '':
+                send_message(timestamp, food_b_temp, "03_food_B")
                                          
             time.sleep(30)
                
