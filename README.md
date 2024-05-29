@@ -41,6 +41,8 @@ The Smart BBQ Monitoring System is a software solution designed to monitor and m
 - `util_logger.py`: Utility module for setting up logging functionality.
 - `smoker-temps.csv`: Sample CSV file containing temperature data.
 - `requirements.txt`: File listing the dependencies required by the project.
+- `bbq_montoring.log`: Timestamped log of messages
+- `bbq_monitoring_log_screenshot.png`: ![Sample Log]()
 
 **Customization:**
 - You can customize the CSV file (`smoker-temps.csv`) with your temperature data.
