@@ -69,7 +69,7 @@ def send_message(timestamp: str, temperature: float, queue_name: str):
         conn.close()
                   
 def read_tasks(file_path: str):
-    """ Read tasks from a CSV file and send them to RabbitMQ"""     
+    """ Read messages from a CSV file and send them to RabbitMQ"""     
         
     with open(file_path, newline="") as csvfile:
         reader = csv.reader(csvfile, delimiter=",")
