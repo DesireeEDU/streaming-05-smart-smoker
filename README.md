@@ -32,7 +32,7 @@ The Smart BBQ Monitoring System is a software solution designed to monitor and m
    - When prompted, you can choose to monitor RabbitMQ queues by typing `y`.
    - This will open the RabbitMQ Admin interface in your default web browser.
   
-   *Note about Monitoring RabbitMQ Queues:
+   *Note:
       - The program will prompt you to monitor RabbitMQ queues. This prompt is controlled by the `show_offer` parameter in the `offer_rabbitmq_admin_site` function.
       - By default, `show_offer` is set to `True`, meaning you will be asked if you want to monitor the queues. You can change this behavior by setting `show_offer` to `False` when calling the function.
 
