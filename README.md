@@ -28,6 +28,7 @@ The Smart BBQ Monitoring System is a software solution designed to monitor and m
      python bbq_monitoring.py
      ```
 
+   ![Console Screenshot](https://github.com/DesireeEDU/streaming-05-smart-smoker/blob/main/console_screenshot.png)
 4. Monitor RabbitMQ Queues:
    - When prompted, you can choose to monitor RabbitMQ queues by typing `y`.
    - This will open the RabbitMQ Admin interface in your default web browser.
