@@ -5,7 +5,7 @@
 The Smart BBQ Monitoring System is a software solution designed to monitor and manage temperature data from various sensors installed in a barbecue setup. This system aims to provide real-time monitoring of smoker and food temperatures, facilitating better control over the cooking process.
 
 **Features:**
-- Reads temperature data from a CSV file.
+- Reads temperature data from a CSV file every 30 seconds.
 - Sends temperature data to RabbitMQ queues for further processing.
 - Utilizes RabbitMQ for message queuing and distribution.
 - Offers an option to monitor RabbitMQ queues via the RabbitMQ Admin interface.
@@ -41,6 +41,8 @@ The Smart BBQ Monitoring System is a software solution designed to monitor and m
 - `util_logger.py`: Utility module for setting up logging functionality.
 - `smoker-temps.csv`: Sample CSV file containing temperature data.
 - `requirements.txt`: File listing the dependencies required by the project.
+- `bbq_montoring.log`: Timestamped log of messages
+- `bbq_monitoring_log_screenshot.png`: ![Sample Log](https://github.com/DesireeEDU/streaming-05-smart-smoker/blob/main/bbq_monitoring_log_screenshot.png)
 
 **Customization:**
 - You can customize the CSV file (`smoker-temps.csv`) with your temperature data.
@@ -52,10 +54,10 @@ The Smart BBQ Monitoring System is a software solution designed to monitor and m
 - The system may require appropriate permissions to access RabbitMQ queues and other resources.
 
 **Author:**
-[Desiree Thompson]
+Desiree Thompson
 
 **Date:**
-[05/29/2024]
+05/29/2024
 
 **Acknowledgments:**
 - The project utilizes ChatGPT, an AI language model developed by OpenAI, for assistance in writing the README and providing guidance on software engineering practices.
