@@ -31,6 +31,10 @@ The Smart BBQ Monitoring System is a software solution designed to monitor and m
 4. Monitor RabbitMQ Queues:
    - When prompted, you can choose to monitor RabbitMQ queues by typing `y`.
    - This will open the RabbitMQ Admin interface in your default web browser.
+  
+**Note about Monitoring RabbitMQ Queues:** 
+  - The program will prompt you to monitor RabbitMQ queues. This prompt is controlled by the `show_offer` parameter in the `offer_rabbitmq_admin_site` function.
+  - By default, `show_offer` is set to `True`, meaning you will be asked if you want to monitor the queues. You can change this behavior by setting `show_offer` to `False` when calling the function.
 
 **File Structure:**
 - `bbq_monitoring.py`: Main script to read temperature data from CSV, send messages to RabbitMQ, and log events.
