@@ -6,3 +6,11 @@
 2024-05-29 14:41:09,842.bbq_monitoring.INFO Working dir: D:\Master's Data Analytics\Courses\44671 Streaming Data\Module 5\streaming-05-smart-smoker
 2024-05-29 14:41:09,842.bbq_monitoring.INFO ==================================================
 2024-05-29 14:41:09,874.bbq_monitoring.INFO [X] Sent message to queue 01-smoker: 5/22/2021 12:20, 84.2
+2024-05-29 14:41:39,901.bbq_monitoring.INFO [X] Sent message to queue 01-smoker: 5/22/2021 12:20, 84.2
+2024-05-29 14:42:09,942.bbq_monitoring.INFO [X] Sent message to queue 01-smoker: 5/22/2021 12:21, 87.6
+2024-05-29 14:42:40,008.bbq_monitoring.INFO [X] Sent message to queue 01-smoker: 5/22/2021 12:21, 87.6
+2024-05-29 14:43:10,052.bbq_monitoring.INFO [X] Sent message to queue 01-smoker: 5/22/2021 12:22, 86.3
+2024-05-29 14:43:40,083.bbq_monitoring.INFO [X] Sent message to queue 01-smoker: 5/22/2021 12:22, 86.3
+2024-05-29 14:44:10,109.bbq_monitoring.INFO [X] Sent message to queue 01-smoker: 5/22/2021 12:23, 92
+2024-05-29 14:44:40,141.bbq_monitoring.INFO [X] Sent message to queue 01-smoker: 5/22/2021 12:23, 92
+2024-05-29 14:45:10,165.bbq_monitoring.INFO [X] Sent message to queue 01-smoker: 5/22/2021 12:24, 96.8
