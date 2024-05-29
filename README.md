@@ -54,7 +54,7 @@ The Smart BBQ Monitoring System is a software solution designed to monitor and m
 - The system may require appropriate permissions to access RabbitMQ queues and other resources.
 
 **Author:**
-[Desiree Thompson]
+Desiree Thompson
 
 **Date:**
 [05/29/2024]
