@@ -5,7 +5,7 @@
 The Smart BBQ Monitoring System is a software solution designed to monitor and manage temperature data from various sensors installed in a barbecue setup. This system aims to provide real-time monitoring of smoker and food temperatures, facilitating better control over the cooking process.
 
 **Features:**
-- Reads temperature data from a CSV file.
+- Reads temperature data from a CSV file every 30 seconds.
 - Sends temperature data to RabbitMQ queues for further processing.
 - Utilizes RabbitMQ for message queuing and distribution.
 - Offers an option to monitor RabbitMQ queues via the RabbitMQ Admin interface.
