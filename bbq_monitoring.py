@@ -1,10 +1,9 @@
 """
-    This program reads temperature data from a CSV file and sends the temperature
-    data to RabbitMQ queues for further processing
-    
-    Author: Desiree Thompson
-    Date: May 29, 2024
+This program reads temperature data from a CSV file and sends the temperature
+data to RabbitMQ queues for further processing
 
+Author: Desiree Thompson
+Date: May 29, 2024
 """
 
 import pika
@@ -16,7 +15,6 @@ import time
 
 from util_logger import setup_logger
 logger, logname = setup_logger(__file__)
-
 
 def offer_rabbitmq_admin_site(show_offer: bool = True):
     """Offer to open the RabbitMQ Admin website"""
@@ -41,64 +39,62 @@ def rabbitmq_connection(host: str, queues: list):
     """
     try:
         # create a blocking connection to the RabbitMQ server
-        conn = pika.BlockingConnection(pika.ConnectionParameters(host))
+        connection = pika.BlockingConnection(pika.ConnectionParameters(host))
         # use the connection to create a communication channel
-        ch = conn.channel()
-        # delete and declare new durable queues
+        channel = connection.channel()
+        # declare new durable queues
         for queue_name in queues:
-            ch.queue_delete(queue=queue_name)
-            ch.queue_declare(queue=queue_name, durable=True)
-            return conn, ch
+            channel.queue_declare(queue=queue_name, durable=True)
+        return connection, channel
     except pika.exceptions.AMQPConnectionError as e:
-        logger.error(f"{e}")
+        logger.error(f"Error: Connection to RabbitMQ server failed: {e}")
         sys.exit(1)
-                                
-def send_message(timestamp: str, temperature: float, queue_name: str):
+
+def send_message(channel, timestamp: str, temperature: float, queue_name: str):
     """Send a message to RabbitMQ"""
     try:
-        conn, ch = rabbitmq_connection(host, queues)
-        # create a message tuple
+        # create a message string
         message = f"{timestamp}, {temperature}"
     
         # publish the message to the queue
-        ch.basic_publish(exchange="", routing_key=queue_name, body=message)
+        channel.basic_publish(exchange="", routing_key=queue_name, body=message)
         logger.info(f"[X] Sent message to queue {queue_name}: {message}")
     except pika.exceptions.AMQPConnectionError as e:
-        logger.error(f"Error: Connection to RabbitMQ server failed: {e}")
-    finally: 
-        conn.close()
-                  
-def read_tasks(file_path: str):
-    """ Read messages from a CSV file and send them to RabbitMQ"""     
-        
-    with open(file_path, newline="") as csvfile:
-        reader = csv.reader(csvfile, delimiter=",")
-        next(reader) #Skip header row
-        for row in reader:
-            timestamp = row[0]
-            smoker_temp = row[1]       
-            food_a_temp = row[2]
-            food_b_temp = row[3]
-            if smoker_temp != '':
-                send_message(timestamp, smoker_temp, "01-smoker")
-            if food_a_temp != '':
-                send_message(timestamp, food_a_temp, "02_food_A")
-            if food_b_temp != '':
-                send_message(timestamp, food_b_temp, "03_food_B")
-                                         
-            time.sleep(30)
-               
+        logger.error(f"Error: Failed to send message: {e}")
+
+def read_tasks(file_path: str, host: str, queues: list):
+    """Read messages from a CSV file and send them to RabbitMQ"""
+    connection, channel = None, None
+    try:
+        connection, channel = rabbitmq_connection(host, queues)
+        with open(file_path, newline="") as csvfile:
+            reader = csv.reader(csvfile, delimiter=",")
+            next(reader)  # Skip header row
+            for row in reader:
+                timestamp = row[0]
+                smoker_temp = row[1]
+                food_a_temp = row[2]
+                food_b_temp = row[3]
+                if smoker_temp:
+                    send_message(channel, timestamp, smoker_temp, "01-smoker")
+                if food_a_temp:
+                    send_message(channel, timestamp, food_a_temp, "02-food-A")
+                if food_b_temp:
+                    send_message(channel, timestamp, food_b_temp, "03-food-B")
+                #time.sleep(30)  # Sleep to simulate time intervals between messages
+    except Exception as e:
+        logger.error(f"Error reading tasks: {e}")
+    finally:
+        if connection and connection.is_open:
+            connection.close()
+
 # Standard Python idiom to indicate main program entry point
-# This allows us to import this module and use its functions
-# without executing the code below.
-# If this is the program being run, then execute the code below
 if __name__ == "__main__":  
-    # ask the user if they'd like to open the RabbitMQ Admin sitepyton
-    # Allow user to choose whether they would like to be directed to the Admin site 
-    offer_rabbitmq_admin_site(show_offer=False)
+    # ask the user if they'd like to open the RabbitMQ Admin site
+    offer_rabbitmq_admin_site(show_offer=True)
     # create variables   
     file_name = 'smoker-temps.csv'
     host = "localhost"
-    queues = ["01-smoker", "02-food-A", "02-food-B"]
-    #send message to the queue
-    read_tasks(file_name)
+    queues = ["01-smoker", "02-food-A", "03-food-B"]
+    # send messages to the queue
+    read_tasks(file_name, host, queues)
